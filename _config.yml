@@ -1,7 +1,5 @@
-title: Immersive Animal Anatomy Visualizer
-description: With the practical/logistical challenges inherent to acquiring cadavers, and the limintations of studying 3 dimensional structures from a textbook, there exists a need for a portable, convenient tool to provide students regular "hands-on" learning. This is the aim of the Immersive Animal Anatomy Visualizer.
+title: Cayman theme
+description: Cayman is a clean, responsive theme for GitHub Pages.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-cayman
-url: https://iannbackus.github.io
-baseurl: /ImmersiveAnimalAnatomy
