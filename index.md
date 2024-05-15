@@ -24,7 +24,7 @@ Along with a strong model manipulation system, our software arms users with a co
 
 Our software is distributed via the Oculus App Lab, this means updates/changes can be easily downloaded by users like any other application on the Oculus Quest 2. To get access to this application, your Oculus account can be manually whitelisted on to the user list by contacting the OSU Extended Reality Laboratory at:
 
-*"xr-lab@oregonstate.edu". 
+* xr-lab@oregonstate.edu 
 
 Once you've been whitelisted, the app will be available on your Oculus Quest 2 for download in your app list. Updates will be automatically distributed.
 
