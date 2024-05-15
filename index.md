@@ -20,6 +20,14 @@ Our project takes advantage of the natural movement provided by a VR headset to 
 
 Along with a strong model manipulation system, our software arms users with a collection of learning tools to help them both in their process of becoming more confident with the anatomy, as well as in their process of viewing the model easily. Our software provides users with the ability to take quizzes, draw/take notes, view information on anatomy parts, and alter the visual properties of anatomy parts to make them highlighted, invisible, transparent, etc.
 
+## Convenient Access
+
+Our software is distributed via the Oculus App Lab, this means updates/changes can be easily downloaded by users like any other application on the Oculus Quest 2. To get access to this application, your Oculus account can be manually whitelisted on to the user list by contacting the OSU Extended Reality Laboratory at:
+
+*"xr-lab@oregonstate.edu". 
+
+Once you've been whitelisted, the app will be available on your Oculus Quest 2 for download in your app list. Updates will be automatically distributed.
+
 ## Team Members
 
 ### Quinn Hoffman
