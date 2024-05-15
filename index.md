@@ -2,122 +2,45 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+![Level Sample](/assets/Screenshot%202024-05-05%20135141.png)
 
-[Link to another page](./another-page.html).
+# Studying Anatomy Is Difficult!
 
-There should be whitespace between paragraphs.
+Textbook diagrams are insufficient for deliberate studying, and modern anatomical models are expensive and delicate! Cadavers are the best way to study anatomy but can be quite impractical to source on a regular basis, and aren’t suited towards a large lecture environment. To help Veterinary students learn anatomy we have created a program that allows for immersive, collaborative studying in a VR environment.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+The inherent advantage of studying Anatomy in a VR medium is that it enables users to interact with the model in an engaging, hands-on, and natural manner. This is in stark contrast to simply looking at a textbook, where the student has no real means of influencing the material they're learning from. In this VR space, users are free to explore, move, pick-apart, and otherwise manipulate the anatomical structures to allow them to more easily understand them.
 
-# Header 1
+Anatomy is an inherently 3D study, so it only makes sense that a student should have regular opportunity to learn in a 3D way.
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+## Hands On Exploration
 
-## Header 2
+Our project takes advantage of the natural movement provided by a VR headset to enable users to learn with a virtual model in a hands-on way. Users can move, rotate, pick apart, and otherwise manipulate the model using their hands in an intuitive way. This has the amazing potential to seriously increase the amount of "hands-on" time a student can get while learning anatomy due to the practical limitations of having regular access to cadavers.
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+## A Suite Of Learning Tools
 
-### Header 3
+Along with a strong model manipulation system, our software arms users with a collection of learning tools to help them both in their process of becoming more confident with the anatomy, as well as in their process of viewing the model easily. Our software provides users with the ability to take quizzes, draw/take notes, view information on anatomy parts, and alter the visual properties of anatomy parts to make them highlighted, invisible, transparent, etc.
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+## Team Members
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+### Quinn Hoffman
 
-#### Header 4
+Quinn Hoffman is a Computer Science student with a specialization in Simulation and Game Programming. Graduating in 2024 magna cum laude, his expertise using Game Engines to design incredible user experiences was vital to the completion of this project.
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+#### Contact Info
 
-##### Header 5
+* qhh746@gmail.com
+* (971) 801-3708
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+### Ian Backus
 
-###### Header 6
+Ian Backus is a Computer Science student and undergraduate researcher specializing in applied artificial intelligence. He has multiple years of experience in VR application development both under Raffaele De Amicis and outside companies, which has proven an asset in developing this project. He plans to graduate in spring of 2025.
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+#### Contact Info
 
-### There's a horizontal rule below this.
+* backusi@oregonstate.edu
+* (503) 602 5218
 
-* * *
+## Acknowledgements
 
-### Here is an unordered list:
+We would like to thank: Rafaele De Amicis, Elisa Monaco, Pranjali Ramesh Barve for their input, assistance, and confidence throughout the duration of this project.
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
