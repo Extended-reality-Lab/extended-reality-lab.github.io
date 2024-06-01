@@ -2,7 +2,7 @@
 layout: default
 ---
 
-![Level Sample](/assets/Screenshot%202024-05-05%20135141.png)
+![Level Sample](/assets/ezgif-4-bb5bf073ee.gif)
 
 # Studying Anatomy Is Difficult!
 
