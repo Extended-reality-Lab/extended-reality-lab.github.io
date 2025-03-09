@@ -4,3 +4,7 @@ Gemfile.lock
 *.gem
 .jekyll-cache
 .jekyll-cache
+.editorconfig
+.vs
+.git
+.github

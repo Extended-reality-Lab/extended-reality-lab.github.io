@@ -1,8 +1,8 @@
 ---
-layout: default
+title: Immersive Animal Anatomy Visualizer
+head-references: immersive-animal-anatomy-visualizer
 ---
-
-![Level Sample](/assets/ezgif-4-bb5bf073ee.gif)
+![Level Sample](/assets/img/ezgif-4-bb5bf073ee.gif)
 
 # Studying Anatomy Is Difficult!
 

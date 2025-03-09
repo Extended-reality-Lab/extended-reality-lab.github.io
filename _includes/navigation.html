@@ -1,0 +1,10 @@
+<nav>
+	<ul>
+		{% assign url = "/" | append: page.slug %}
+		{% for item in site.data.navigation %}
+		<li><a href="{{ item.link }}" {% if url==item.link %} class="nav-current" {% else %} class="btn nav" {% endif %}>
+			{{ item.name }}
+		</a></li>
+		{% endfor %}
+	</ul>
+</nav>

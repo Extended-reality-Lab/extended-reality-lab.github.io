@@ -2,4 +2,7 @@
 
 source "https://rubygems.org"
 
-gemspec
+#gemspec
+
+# Dependencies
+gem "github-pages", group: :jekyll_plugins

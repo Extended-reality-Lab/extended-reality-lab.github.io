@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+
+<p>
+	{{ page.date | date_to_string }}
+	{% for staff in page.staff %}
+		{% assign staff = site.staff | where: 'short_name', page.staff | first %}
+		- <a href="{{ staff.url }}">{{ staff.name }}</a>
+	{% endfor %}
+</p>
+
+{{ content }}
