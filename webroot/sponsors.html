@@ -1,0 +1,14 @@
+---
+title: Sponsors
+---
+<h1>Sponsors</h1>
+
+<ul>
+	{% for sponsor in site.sponsors %}
+	<li>
+		<h2><a href="{{ sponsor.link }}" class=".btn">{{ sponsor.name }}</a></h2>
+		<h3>{{ sponsor.position }}</h3>
+		<p>{{ sponsor.content }}</p>
+	</li>
+	{% endfor %}
+</ul>

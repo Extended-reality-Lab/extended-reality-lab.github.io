@@ -1,4 +1,7 @@
 {% assign title = title | append: site.title | append: ' | ' | append: page.title %}
+{% assign slug = page.path | split: '.' %}
+{% assign slug = slug[0] | slugify %}
+{% if slug == "index" %} {% assign slug = "" %} {% endif %}
 
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">

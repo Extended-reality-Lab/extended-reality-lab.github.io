@@ -1,12 +1,16 @@
 - name : Home
   link : /
+  collection : 
 - name : About
   link : /about
 - name : Projects
   link : /projects
+  collection : projects
 - name : Blog
   link : /blog
 - name : Staff
   link : /staff
+  collection : staff
 - name : Sponsors
   link : /sponsors
+  collection : sponsors
