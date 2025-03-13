@@ -1,0 +1,9 @@
+{% if page.darkbtn == 1 %} {% assign class = ".btn-dark" %} {% else %} {% assign class = ".btn" %} {% endif %}
+{% assign buttonArray = page.connections | split: "||" %}
+<div class=".connect-with-me">
+	<h2>Connect with {{ page.name }}</h2>
+	<p>{{ buttonArray[0] | inspect }}</p>
+	<div>{% for button in buttonArray %} {% assign thisButton = button | split: "|" %}
+		<a ="{{ thisButton[1] }}" class="{{ class }}">{{ thisButton[0] }}</a>
+	{% endfor %}</div>
+</div>
