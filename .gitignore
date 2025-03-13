@@ -4,3 +4,8 @@ Gemfile.lock
 *.gem
 .jekyll-cache
 .jekyll-cache
+.editorconfig
+.vs
+.git
+.github
+/Run-Test-Server.bat

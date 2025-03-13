@@ -1,4 +1,53 @@
-title: Immersive Animal Anatomy Visualizer
-description: A Portable Study Tool for Anatomy Students
+title: OSU's Extended Reality Lab
+description: Oregon State University's Extended Reality Lab
 google_analytics:
 theme: jekyll-theme-cayman
+source: webroot
+
+
+collections_dir: collections
+collections:
+  authors:
+    output: true
+  projects:
+    output: true
+    permalink: /:collection/:name
+  staff:
+    output: true
+    permalink: /:collection/:name
+  sponsors:
+    output: true
+
+
+defaults:
+- scope:
+    path: ""
+    type: "authors"
+  values:
+    layout: "author"
+- scope:
+    path: ""
+    type: "posts"
+  values:
+    layout: "post"
+- scope:
+    path: ""
+    type: "projects"
+  values: 
+    layout: "project"
+- scope:
+    path: ""
+    type: "staff"
+  values: 
+    layout: "staff"
+    title: Staff | :name
+- scope:
+    path: ""
+    type: "sponsors"
+  values:
+    layout: "sponsor"
+- scope:
+    path: ""
+  values:
+    layout: "default"
+    head-references: ""

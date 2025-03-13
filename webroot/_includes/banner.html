@@ -1,0 +1,12 @@
+{% include navigation.html %}
+<header role="banner">
+	<div class="page-header">
+		<h1 class="project-name">{{ page.title }}</h1>
+		<h2 class="project-tagline">{{ page.description }}</h2>
+		{% assign references = site.data.head-references[page.head-references] %}
+
+		{% for item in references %}
+		<a href="{{ item.link }}" class="btn">{{ item.name }}</a>
+		{% endfor %}
+	</div>
+</header>

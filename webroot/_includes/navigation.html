@@ -1,0 +1,33 @@
+<nav class="header-nav" role="banner">
+	<h1 class="site-name">{{ site.title }}</h1>
+
+		<ul>
+			{% assign url = "/" | append: slug %}
+			{% if page.collection %} 
+				{% assign subUrl = url %} 
+				{% assign url = "/" | append: page.collection %}
+			{% endif %}
+			{% for item in site.data.navigation %}
+			<li>
+				{% if item.collection %} <div class="dropdown"> {% endif %}
+					<a href="{{ item.link }}" class ="{% if url == item.link %}nav-current{% else %}btn{% endif %} {% if item.collection %}dropbtn{% endif %}">
+						{{ item.name }}
+					</a>
+					{% if item.collection %}
+						<div class="dropdown-content nav-dropdown-content">
+							{% for collection in site.collections %}
+								{% if collection.label == item.collection %}
+									{% for collItem in site[collection.label] %}
+										<a href="{{ collItem.url }}" class="{% if page.url == collItem.url %}nav-current{% else %}btn{% endif %}">{{ collItem.title }}</a>
+									{% endfor %}
+								{% endif %}
+							{% endfor %}
+						</div>
+					{% endif %}
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+
+</nav>
+<!-- <p>{{page | inspect}}</p> debug text -->
