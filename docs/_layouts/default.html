@@ -10,6 +10,12 @@
 	<title>{{ title }}</title>
 	<link rel="stylesheet" href="/assets/css/style.css">
 
+	{% if page.aframe == "true" %}{% include a-frame-head.html %}{% else %}
+	<!-- Not working as expected... -->
+	<script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/aframe-extras/dist/aframe-extras.min.js"></script>
+	{% endif %}
+
 	{% seo %}
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>

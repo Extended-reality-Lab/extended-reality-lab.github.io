@@ -2,7 +2,7 @@ title: OSU's Extended Reality Lab
 description: Oregon State University's Extended Reality Lab
 google_analytics:
 theme: jekyll-theme-cayman
-source: webroot
+source: docs
 
 
 collections_dir: collections
@@ -17,7 +17,12 @@ collections:
     permalink: /:collection/:name
   sponsors:
     output: true
-
+  ar-environments:
+    output: true
+    permalink: /ar/:name
+  vr-environments:
+    output: true
+    permalink: /vr/:name
 
 defaults:
 - scope:

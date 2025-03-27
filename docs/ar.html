@@ -1,0 +1,13 @@
+---
+title: AR Web Environments
+---
+<h1>AR Web Environments</h1>
+
+<ul>
+	{% for environment in site.ar-environments %}
+	<li>
+		<h2><a href="{{ environment.url }}" class=".btn">{{ environment.title }}</a></h2>
+		<p>{{ environment.description | markdownify }}</p>
+	</li>
+	{% endfor %}
+</ul>
