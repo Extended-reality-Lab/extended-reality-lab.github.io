@@ -34,8 +34,12 @@ defaults:
     path: ""
     type: "ar-environments"
   values:
-    aframe: "true"
-    ar: "true"
+    layout: "a-frame"
+- scope:
+    path: ""
+    type: "vr-environments"
+  values:
+    layout: "a-frame"
 - scope:
     path: ""
     type: "posts"

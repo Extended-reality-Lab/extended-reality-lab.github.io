@@ -10,6 +10,9 @@
 	<title>{{ title }}</title>
 	<link rel="stylesheet" href="/assets/css/style.css">
 
+<script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aframe-extras/dist/aframe-extras.min.js"></script>
+
 	{% if page.headadd != "" %}{{ page.headadd }}{% endif %}
 
 	{% seo %}
@@ -21,8 +24,6 @@
 	{% include head-custom.html %}
 </head>
 <body>
-	{% include banner.html %}
 	{{ content }}
-	{% include buttons.html %}
 </body>
 </html>
