@@ -32,6 +32,12 @@ defaults:
     layout: "author"
 - scope:
     path: ""
+    type: "ar-environments"
+  values:
+    aframe: "true"
+    ar: "true"
+- scope:
+    path: ""
     type: "posts"
   values:
     layout: "post"
@@ -56,3 +62,6 @@ defaults:
   values:
     layout: "default"
     head-references: ""
+    ar: ""
+    aframe: ""
+    headadd: ""

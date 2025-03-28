@@ -3,12 +3,24 @@ title: AR Test
 description: An example where an object is visible in AR
 aframe: true
 layout: default
+headadd: "<script>
+    AFRAME.registerComponent('follow-shadow', {
+        schema: { type: 'selector' },
+        init() { this.el.object3D.renderOrder = -1; },
+        tick() {
+            if (this.data) {
+                this.el.object3D.position.copy(this.data.object3D.position);
+                this.el.object3D.position.y -= 0.001; // stop z-fighting
+            }
+        }
+    });
+</script>"
 ---
 <a-scene reflection="directionalLight: a-light[type=directional]"
          ar-hit-test="target: #inverter;"
          renderer="colorManagement: true; exposure: 1; toneMapping: ACESFilmic"
          shadow="type: pcfsoft"
-         xr-mode-ui="XRMode: xr">
+         xr-mode-ui="XRMode: xr; enabled: true">
     <a-assets>
         <a-asset-item id="DecimatedInverter-1-gltf" src="/assets/a-frame/models/test1/low_poly_green_tree/scene.gltf"></a-asset-item>
     </a-assets>
@@ -17,7 +29,7 @@ layout: default
     <a-camera position="0 0.4 0" wasd-controls="acceleration:10;"></a-camera>
 
     <!-- gltf entities -->
-    <a-entity id="inverter" gltf-model="#DecimatedInverter-1-gltf" position="0 -0.04 0" rotation="0 -90 0" scale="0.03 0.03 0.03" animation-mixer></a-entity>
+    <a-entity id="inverter" gltf-model="#DecimatedInverter-1-gltf" position="0 -0.04 -2" rotation="0 -90 0" scale="0.06 0.06 0.06" animation-mixer shadow></a-entity>
 
     <a-plane follow-shadow="#inverter" material="shader:shadow" shadow="cast:false;" rotation="-90 0 0" width="2" height="2"></a-plane>
     <a-sky color="#ECECEC" hide-on-enter-ar></a-sky>
