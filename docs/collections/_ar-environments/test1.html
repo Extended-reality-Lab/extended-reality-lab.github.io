@@ -2,7 +2,8 @@
 title: AR Test
 description: An example where an object is visible in AR
 layout: default
-headadd: "<script>
+headadd: "
+<script>
     AFRAME.registerComponent('follow-shadow', {
         schema: { type: 'selector' },
         init() { this.el.object3D.renderOrder = -1; },
@@ -15,14 +16,13 @@ headadd: "<script>
     });
 </script>"
 ---
-<a-scene reflection="directionalLight: a-light[type=directional]"
-         ar-hit-test="target: #inverter;"
-         renderer="colorManagement: true; exposure: 1; toneMapping: ACESFilmic"
-         shadow="type: pcfsoft"
-         xr-mode-ui="enabled: true; enterAREnabled: true; XRMode: xr"
+<!--reflection="directionalLight: a-light[type=directional]"
+      ar-hit-test="target: #inverter;"
+      renderer="colorManagement: true; exposure: 1; toneMapping: ACESFilmic"
+      shadow="type: pcfsoft"-->
+<a-scene xr-mode-ui="enabled: true; enterAREnabled: true; XRMode: xr"
          webxr="requiredFeatures: hit-test,local-floor;
-                optionalFeatures: dom-overlay, unbounded"
-    >
+                optionalFeatures: dom-overlay, unbounded">
     <a-assets>
         <a-asset-item id="DecimatedInverter-1-gltf" src="/assets/a-frame/models/test1/low_poly_green_tree/scene.gltf"></a-asset-item>
     </a-assets>
