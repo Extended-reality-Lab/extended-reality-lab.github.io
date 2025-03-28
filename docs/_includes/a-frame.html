@@ -1,0 +1,37 @@
+{% comment %}
+<!-- _config.yml contains the variable a-frame_version, which contains the url of the a-frame library used by the website -->
+ {% endcomment %}
+<script src="{{ site.a-frame_version }}"></script>
+
+<!-- To add support for a new a-frame addon, add it in _data/a-frame-addons.yml -->
+{% if page.aframeAddons != "" %}
+	{% addons = page.aframeAddons | downcase | split: ' ' %}
+	{% for addonRequest in addons %}
+		{% for supportedAddon in site.data.a-frame-addons %}
+			{% if addonRequest == supportedAddon.tag %}
+<script src="{{ supportedAddon.src }}"></script>
+				{% break %}
+			{% endif }
+		{% endfor %}
+	{% endfor %}
+{% endif %}
+
+{% comment %}
+<!-- Fetch all components listed in the a-frame environment page, within page.aframeComponents
+	 This is meant for re-usable components. Components specialized for a specific environment should be in collections/_aframe-unique -->
+{% endcomment %}
+{% if page.aframeComponents != "" %}
+	{% componentList = page.aframeComponents | split: ' ' %}
+	{% for component in componentList %}
+
+<script src="/assets/a-frame/components/{{ component }}"></script>
+	{% endfor %}
+{% endif %}
+
+{% comment %}
+<!-- If unique components used, fetch them.
+	 The slug of the aframe-unique file must match the slug of the xr-environment (ie. _xr-environment\example.html and _aframe-unique\example.js) -->
+{% endcomment %}
+{% if page.aframeUniqueComponents == "true" %}
+<script src="/xr/{{ slug }}/components"></script>
+{% endif %}

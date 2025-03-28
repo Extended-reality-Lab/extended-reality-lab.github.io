@@ -10,6 +10,10 @@
 	<title>{{ title }}</title>
 	<link rel="stylesheet" href="/assets/css/style.css">
 
+	{% if page.aframe == "true" %}
+		{% include a-frame.html %} 
+	{% endif %}
+
 	{% if page.headadd != "" %}{{ page.headadd }}{% endif %}
 
 	{% seo %}
@@ -21,9 +25,12 @@
 	{% include head-custom.html %}
 </head>
 <body>
-	{% include banner.html %}
-	{% comment %} <!-- <h1>Debug Text</h1><em>uncomment this to debug page variables</em><p>{{page | inspect}}</p> --> {% endcomment %}
+	{% comment %} <!-- Body must be empty if we are displaying an a-frame environment! --> {% endcomment %}
+	{% if page.aframe != "true"} {% include banner.html %} {% endif %}
+
+	{% comment %} <em visibility="hidden">uncomment this to debug page variables</em> <h1>Page inspect (debug):</h1> <p>{{page | inspect}}</p> {% endcomment %}
+
 	{{ content }}
-	{% include buttons.html %}
+	{% if page.aframe != "true"} {% include buttons.html %} {% endif %}
 </body>
 </html>

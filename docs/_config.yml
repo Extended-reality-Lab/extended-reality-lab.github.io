@@ -4,6 +4,7 @@ google_analytics:
 theme: jekyll-theme-cayman
 source: docs
 
+a-frame_version: https://aframe.io/releases/1.7.0/aframe.min.js
 
 collections_dir: collections
 collections:
@@ -17,12 +18,12 @@ collections:
     permalink: /:collection/:name
   sponsors:
     output: true
-  ar-environments:
+  xr-environments:
     output: true
-    permalink: /ar/:name
-  vr-environments:
-    output: true
-    permalink: /vr/:name
+    permalink: /xr/:name
+  aframe-unique:
+    output: false
+    permalink: /xr/:name/components
 
 defaults:
 - scope:
@@ -32,14 +33,14 @@ defaults:
     layout: "author"
 - scope:
     path: ""
-    type: "ar-environments"
+    type: "xr-environments"
   values:
-    layout: "a-frame"
+    aframe: "true"
 - scope:
     path: ""
-    type: "vr-environments"
+    type: "posts"
   values:
-    layout: "a-frame"
+    layout: "post"
 - scope:
     path: ""
     type: "posts"
@@ -66,6 +67,8 @@ defaults:
   values:
     layout: "default"
     head-references: ""
-    ar: ""
     aframe: ""
+    aframeAddons: ""
+    aframeComponents: ""
+    aframeUniqueComponents: ""
     headadd: ""

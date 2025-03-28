@@ -9,12 +9,9 @@
 - name : Staff
   link : /staff
   collection : staff-categories
-- name : Website AR Experiences
-  link : /ar
-  collection : ar-environments
-- name : Website VR Experiences
-  link : /vr
-  collection : vr-environments
+- name : Website XR Experiences
+  link : /xr
+  collection : xr-environments
 - name : Blog
   link : /blog
 - name : Sponsors
