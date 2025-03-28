@@ -2,32 +2,42 @@
 	<h1 class="site-name">{{ site.title }}</h1>
 
 		<ul>
+{% comment %} <!-- Get the page slug from default layout, use it to direct buttons to webpages without file extensions --> {% endcomment %}
 			{% assign url = "/" | append: slug %}
+
+{% comment %} <!-- Since we are placing collections at :collection/:name, we need to get both the collection name and page slug for the url --> {% endcomment %}
 			{% if page.collection %} 
 				{% assign subUrl = url %} 
 				{% assign url = "/" | append: page.collection %}
 			{% endif %}
+
+{% comment %} <!-- Add a button for each page in _data\navigation.yml --> {% endcomment %}
 			{% for item in site.data.navigation %}
 			<li>
+{% comment %} <!-- If button leads to a collection, place it inside a dropdown container --> {% endcomment %}
 				{% if item.collection %} <div class="dropdown"> {% endif %}
-					<a href="{{ item.link }}" class ="{% if url == item.link %}nav-current{% else %}btn{% endif %} {% if item.collection %}dropbtn{% endif %}">
-						{{ item.name }}
-					</a>
-					{% if item.collection %}
+
+{% comment %} <!-- This always happens --> {% endcomment %}
+						<a href="{{ item.link }}" class="{% if url == item.link %}nav-current{% else %}btn{% endif %} {% if item.collection %}dropbtn{% endif %}">
+							{{ item.name }}
+						</a>
+
+{% comment %} <!-- if button leads to a collection, add a dropdown of direct buttons to the collection members --> {% endcomment %}
+						{% if item.collection %}
 						<div class="dropdown-content nav-dropdown-content">
+{% comment %} <!-- Find the collection this dropdown belongs to, then add a button for each item in that collection --> {% endcomment %}
 							{% for collection in site.collections %}
-								{% if collection.label == item.collection %}
-									{% for collItem in site[collection.label] %}
-										<a href="{{ collItem.url }}" class="{% if page.url == collItem.url %}nav-current{% else %}btn{% endif %}">{{ collItem.title }}</a>
-									{% endfor %}
-								{% endif %}
+							{% if collection.label == item.collection %}
+							{% for collectionitem in site[collection.label] %}
+							<a href="{{ collectionitem.url }}" class="{% if page.url == collectionitem.url %}nav-current{% else %}btn{% endif %}">{{ collectionitem.title }}</a>
+							{% endfor %}
+							{% endif %}
 							{% endfor %}
 						</div>
-					{% endif %}
 				</div>
+				{% endif %}
 			</li>
 			{% endfor %}
 		</ul>
 
 </nav>
-<!-- <p>{{page | inspect}}</p> debug text -->
