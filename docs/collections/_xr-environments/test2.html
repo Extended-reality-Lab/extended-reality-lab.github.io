@@ -15,7 +15,7 @@ headadd: "
     });
 </script>"
 ---
-<!---->
+<!-- Scene and Assets -->
 <a-scene reflection="directionalLight: a-light[type=directional]"
       ar-hit-test="target: #inverter;"
       renderer="colorManagement: true; exposure: 1; toneMapping: ACESFilmic"
@@ -24,19 +24,19 @@ headadd: "
       webxr="requiredFeatures: hit-test,local-floor;
              optionalFeatures: dom-overlay, unbounded">
     <a-assets>
-        <a-asset-item id="DecimatedInverter-1-gltf" src="/assets/a-frame/models/test1/low_poly_green_tree/scene.gltf"></a-asset-item>
+        <a-asset-item id="DecimatedInverter-1-gltf" src="/assets/a-frame/models/test1/decimated_inverter/DecimatedInverter 1.gltf></a-asset-item>
     </a-assets>
 
+    <!-- Lighting & Camera-->
     <a-light type="directional" light="castShadow:true;" position="1 1 1" intensity="1.57" shadow-camera-automatic="#objects"></a-light>
     <a-camera position="0 0.4 0" wasd-controls="acceleration:10;"></a-camera>
 
-    <!-- gltf entities -->
+    <!-- Objects -->
     <a-entity id="inverter" gltf-model="#DecimatedInverter-1-gltf" position="0 -0.04 -2" rotation="0 -90 0" scale="0.06 0.06 0.06" animation-mixer shadow></a-entity>
-
     <a-plane follow-shadow="#inverter" material="shader:shadow" shadow="cast:false;" rotation="-90 0 0" width="2" height="2"></a-plane>
+
+    <!-- Optional VR Environment -->
     <a-sky color="#ECECEC" hide-on-enter-ar></a-sky>
     <a-plane position="0 0 0" rotation="-90 0 0" color="#20AA20" height="10" width="10" hide-on-enter-ar></a-plane>
 
 </a-scene>
-<p><em>Credits:</em></p>
-<p>This work is based on "Low poly green tree" (https://sketchfab.com/3d-models/low-poly-green-tree-f1f439b9cb8a46a697299413558bd3f3) by markuzo (https://sketchfab.com/markuzo) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)</p>
