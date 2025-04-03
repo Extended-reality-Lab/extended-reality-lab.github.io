@@ -1,0 +1,53 @@
+---
+title: AR Hand Capture Test
+description: A test where AR interactivity is explored
+aframeAddons: extras motion-capture
+aframeUniqueComponents: true
+aframeComponents: button.js pinchable.js
+---
+<!-- This test builds off of test1 -->
+<a-scene reflection="directionalLight: a-light[type=directional]"
+         ar-hit-test="target: #inverter;"
+         renderer="colorManagement: true; exposure: 1; toneMapping: ACESFilmic"
+         shadow="type: pcfsoft"
+         xr-mode-ui="enabled: true; enterAREnabled: true; XRMode: xr"
+         webxr="requiredFeatures: hit-test,local-floor;
+                optionalFeatures: dom-overlay, unbounded, hand-tracking"
+         avatar-recorder>
+
+    <a-assets>
+        <a-asset-item id="DecimatedInverter-1-gltf" src="/assets/a-frame/models/test1/low_poly_green_tree/scene.gltf"></a-asset-item>
+    </a-assets>
+
+    <!-- Mobs -->
+    <a-camera id="player" position="0 1.6 0" wasd-controls="acceleration:10;">
+        <a-entity laser-controls="hand: left" hand-tracking-controls="hand: left" raycaster="objects: .interactive; lineColor: rgba(173,216,230,0.5); showline: false; enabled: false" gesture-listener="hand: left"></a-entity>
+        <a-entity laser-controls="hand: right" hand-tracking-controls="hand: right" raycaster="objects: .interactive; lineColor: rgba(173,216,230,0.5); showline: false" gesture-listener="hand: right"></a-entity>
+    </a-camera>
+
+
+    <!-- Environment -->
+    <a-sky color="#ECECEC" hide-on-enter-ar></a-sky>
+    <a-plane position="0 0 0" rotation="-90 0 0" color="#20AA20" height="10" width="10" hide-on-enter-ar></a-plane>
+
+    <!-- Lighting -->
+    <a-plane follow-shadow="#inverter" material="shader:shadow" shadow="cast:false;" rotation="-90 0 0" width="2" height="2"></a-plane>
+    <a-light type="directional" light="castShadow:true;" position="1 1 1" intensity="1.57" shadow-camera-automatic="#objects"></a-light>
+
+    <!-- Interactive objects -->
+    <a-plane id="control panel">
+        <a-cylinder class="interactive"></a-cylinder>
+        <a-cylinder class="interactive"></a-cylinder>
+        <a-cylinder class="interactive"></a-cylinder>
+        <a-cylinder class="interactive"></a-cylinder>
+        <a-cube class="slider interactive"></a-cube>
+    </a-plane>
+
+    <!-- Static objects -->
+    <a-entity id="inverter" gltf-model="#DecimatedInverter-1-gltf" position="0 -0.04 -2" rotation="0 -90 0" scale="0.06 0.06 0.06" animation-mixer shadow></a-entity>
+
+    <!-- End of Sorted -->
+
+</a-scene>
+<p><em>Credits:</em></p>
+<p>This work is based on "Low poly green tree" (https://sketchfab.com/3d-models/low-poly-green-tree-f1f439b9cb8a46a697299413558bd3f3) by markuzo (https://sketchfab.com/markuzo) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)</p>
