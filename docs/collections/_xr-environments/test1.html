@@ -17,7 +17,7 @@ headadd: "
 <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
 "
 ---
-<!---->
+<!-- Scene & Assets -->
 <a-scene reflection="directionalLight: a-light[type=directional]"
          ar-hit-test="target: #inverter;"
          renderer="colorManagement: true; exposure: 1; toneMapping: ACESFilmic"
@@ -26,9 +26,12 @@ headadd: "
          webxr="requiredFeatures: hit-test,local-floor;
              optionalFeatures: dom-overlay, unbounded"
          embedded arjs>
+
     <a-assets>
         <a-asset-item id="DecimatedInverter-1-gltf" src="/assets/a-frame/models/test1/decimated_inverter/DecimatedInverter 1.gltf"></a-asset-item>
     </a-assets>
+
+    <!-- Lighting -->
 
     <a-light type="directional" light="castShadow:true;" position="1 1 1" intensity="1.57" shadow-camera-automatic="#objects"></a-light>
     
@@ -43,4 +46,3 @@ headadd: "
     <a-plane position="0 0 0" rotation="-90 0 0" color="#20AA20" height="10" width="10" hide-on-enter-ar></a-plane>
 
 </a-scene>
-<!--<p><em>Credits:</em></p>-->
